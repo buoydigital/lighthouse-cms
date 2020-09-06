@@ -7,7 +7,7 @@ module.exports = ({ env }) => ({
         uri:  env('DATABASE_URI', 'mongodb://localhost:27017/lighthouse-cms'),
       },
       options: {
-        ssl: env('DATABASE_SSL', false),
+        ssl: env.bool('DATABASE_SSL', false),
       },
     },
   },
