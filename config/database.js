@@ -2,17 +2,18 @@ module.exports = ({ env }) => ({
   defaultConnection: 'default',
   connections: {
     default: {
-      connector: 'bookshelf',
+      connector: 'mongoose',
       settings: {
-        client: 'mysql',
+        client: 'mongo',
         host: env('DATABASE_HOST', 'localhost'),
-        port: env.int('DATABASE_PORT', 3306),
+        port: env.int('DATABASE_PORT', 27017),
         database: env('DATABASE_NAME', 'lighthouse-cms'),
-        username: env('DATABASE_USERNAME', 'lighthouse'),
-        password: env('DATABASE_PASSWORD', 'root'),
+        username: env('DATABASE_USERNAME', ''),
+        password: env('DATABASE_PASSWORD', ''),
       },
       options: {
-        ssl: false
+        authenticationDatabase: env('AUTHENTICATION_DATABASE', false),
+        ssl: env('DATABASE_SSL', false),
       },
     },
   },
