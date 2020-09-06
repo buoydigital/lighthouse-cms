@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "name": "Projects"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Website": {
+      "type": "string",
+      "required": true
+    },
+    "Thumbnail": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "Media": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "TechStacks": {
+      "collection": "tech-stacks"
+    }
+  }
+}

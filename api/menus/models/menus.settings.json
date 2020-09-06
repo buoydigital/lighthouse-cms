@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "menus",
+  "info": {
+    "name": "Menus"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "menu_items": {
+      "collection": "main-menu"
+    },
+    "Active": {
+      "type": "boolean"
+    }
+  }
+}

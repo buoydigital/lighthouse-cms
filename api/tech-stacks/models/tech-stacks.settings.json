@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tech_stacks",
+  "info": {
+    "name": "Tech Stacks"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
