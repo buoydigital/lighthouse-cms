@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/social-platforms",
+      "handler": "social-platforms.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/social-platforms/count",
+      "handler": "social-platforms.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/social-platforms/:id",
+      "handler": "social-platforms.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/social-platforms",
+      "handler": "social-platforms.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/social-platforms/:id",
+      "handler": "social-platforms.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/social-platforms/:id",
+      "handler": "social-platforms.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "contact_details",
+  "info": {
+    "name": "Contact Details"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Email": {
+      "type": "email"
+    },
+    "Location": {
+      "type": "string"
+    },
+    "social_platforms": {
+      "collection": "social-platforms"
+    }
+  }
+}

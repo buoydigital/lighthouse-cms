@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "social_platforms",
+  "info": {
+    "name": "Social Platforms"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "URL": {
+      "type": "string"
+    },
+    "Icon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Active": {
+      "type": "boolean"
+    }
+  }
+}
