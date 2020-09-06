@@ -7,7 +7,7 @@ module.exports = ({ env }) => ({
       region: env('AWS_REGION'),
       params: {
         Bucket: env('AWS_S3_BUCKET')
-      }
+      } 
     },
   },
 });
