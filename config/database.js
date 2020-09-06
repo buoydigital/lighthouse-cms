@@ -9,7 +9,10 @@ module.exports = ({ env }) => ({
         port: env.int('DATABASE_PORT', 3306),
         database: env('DATABASE_NAME', 'lighthouse-cms'),
         username: env('DATABASE_USERNAME', 'lighthouse'),
-        password: env('DATABASE_PASSWORD', 'root')
+        password: env('DATABASE_PASSWORD', 'root'),
+        ssl: {
+          rejectUnauthorized: false
+        }
       },
       options: {
         debug: true
