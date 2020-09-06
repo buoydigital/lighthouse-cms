@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/affiliate-fees",
+      "handler": "affiliate-fees.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/affiliate-fees/count",
+      "handler": "affiliate-fees.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/affiliate-fees/:id",
+      "handler": "affiliate-fees.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/affiliate-fees",
+      "handler": "affiliate-fees.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/affiliate-fees/:id",
+      "handler": "affiliate-fees.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/affiliate-fees/:id",
+      "handler": "affiliate-fees.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

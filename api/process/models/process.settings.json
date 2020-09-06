@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "processes",
+  "info": {
+    "name": "Process"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "process_steps": {
+      "collection": "process-steps"
+    }
+  }
+}

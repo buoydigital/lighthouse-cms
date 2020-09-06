@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/affiliates",
+      "handler": "affiliates.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/affiliates",
+      "handler": "affiliates.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/affiliates",
+      "handler": "affiliates.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
