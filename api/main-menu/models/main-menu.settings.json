@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "main_menus",
+  "collectionName": "menu_items",
   "info": {
     "name": "Menu Items"
   },
@@ -9,13 +9,13 @@
     "timestamps": true
   },
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string"
     },
-    "URL": {
+    "url": {
       "type": "string"
     },
-    "Active": {
+    "active": {
       "type": "boolean"
     }
   }

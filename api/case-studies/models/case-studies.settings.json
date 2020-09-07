@@ -9,13 +9,13 @@
     "timestamps": true
   },
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string"
     },
-    "Description": {
+    "description": {
       "type": "richtext"
     },
-    "Active": {
+    "active": {
       "type": "boolean"
     },
     "project": {

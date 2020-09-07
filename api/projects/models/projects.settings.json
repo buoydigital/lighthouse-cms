@@ -9,17 +9,17 @@
     "timestamps": true
   },
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string"
     },
-    "Description": {
+    "description": {
       "type": "richtext"
     },
-    "Website": {
+    "website": {
       "type": "string",
       "required": true
     },
-    "Thumbnail": {
+    "thumbnail": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -30,7 +30,7 @@
       "plugin": "upload",
       "required": true
     },
-    "Media": {
+    "media": {
       "collection": "file",
       "via": "related",
       "allowedTypes": [
@@ -41,7 +41,7 @@
       "plugin": "upload",
       "required": false
     },
-    "TechStacks": {
+    "tech_stacks": {
       "collection": "tech-stacks"
     }
   }

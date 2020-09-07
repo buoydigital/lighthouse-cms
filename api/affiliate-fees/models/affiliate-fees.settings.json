@@ -9,16 +9,16 @@
     "timestamps": true
   },
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string"
     },
-    "Percentage": {
+    "percentage": {
       "type": "integer"
     },
-    "Amount": {
+    "amount": {
       "type": "integer"
     },
-    "Description": {
+    "description": {
       "type": "richtext"
     }
   }

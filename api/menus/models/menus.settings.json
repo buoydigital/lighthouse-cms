@@ -9,13 +9,13 @@
     "timestamps": true
   },
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string"
     },
     "menu_items": {
       "collection": "main-menu"
     },
-    "Active": {
+    "active": {
       "type": "boolean"
     }
   }
