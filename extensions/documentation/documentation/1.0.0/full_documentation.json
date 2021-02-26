@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/26/2021 1:20:20 PM"
+    "x-generation-date": "02/26/2021 2:01:30 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -9894,6 +9894,9 @@
                 "resetPasswordToken": {
                   "type": "string"
                 },
+                "confirmationToken": {
+                  "type": "string"
+                },
                 "confirmed": {
                   "type": "boolean"
                 },
@@ -10041,6 +10044,9 @@
             "minLength": 6
           },
           "resetPasswordToken": {
+            "type": "string"
+          },
+          "confirmationToken": {
             "type": "string"
           },
           "confirmed": {
