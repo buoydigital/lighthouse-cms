@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clients",
+  "info": {
+    "name": "Clients",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "firstname": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "contact_number": {
+      "type": "biginteger"
+    },
+    "website_url": {
+      "type": "string"
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "companies": {
+      "collection": "companies"
+    },
+    "addresses": {
+      "collection": "addresses"
+    }
+  }
+}

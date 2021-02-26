@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/colour-schemes",
+      "handler": "colour-schemes.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/colour-schemes/count",
+      "handler": "colour-schemes.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/colour-schemes/:id",
+      "handler": "colour-schemes.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/colour-schemes",
+      "handler": "colour-schemes.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/colour-schemes/:id",
+      "handler": "colour-schemes.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/colour-schemes/:id",
+      "handler": "colour-schemes.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

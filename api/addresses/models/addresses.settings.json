@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "addresses",
+  "info": {
+    "name": "Addresses"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "line_one": {
+      "type": "string"
+    },
+    "line_two": {
+      "type": "string"
+    },
+    "town": {
+      "type": "string"
+    },
+    "postcode": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    }
+  }
+}

@@ -1,19 +1,18 @@
 {
   "paths": {
-    "/case-studies": {
+    "/addresses": {
       "get": {
         "deprecated": false,
-        "description": "Find all the case-studies's records",
+        "description": "Find all the addresses's records",
         "responses": {
           "200": {
-            "description": "Retrieve case-studies document(s)",
+            "description": "Retrieve addresses document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Addresses"
                   }
                 }
               }
@@ -52,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Case-studies"
+          "Addresses"
         ],
         "parameters": [
           {
@@ -195,18 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new case-studies record",
+        "description": "Create a new addresses record",
         "responses": {
           "200": {
-            "description": "Retrieve case-studies document(s)",
+            "description": "Retrieve addresses document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Addresses"
                 }
               }
             }
@@ -244,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Case-studies"
+          "Addresses"
         ],
         "requestBody": {
           "description": "",
@@ -252,26 +247,26 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCase-studies"
+                "$ref": "#/components/schemas/NewAddresses"
               }
             }
           }
         }
       }
     },
-    "/case-studies/count": {
+    "/addresses/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of case-studies documents",
+        "description": "Retrieve the numver of addresses documents",
         "responses": {
           "200": {
-            "description": "Retrieve case-studies document(s)",
+            "description": "Retrieve addresses document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "properties": {
-                    "foo": {
-                      "type": "string"
+                    "count": {
+                      "type": "integer"
                     }
                   }
                 }
@@ -311,26 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Case-studies"
+          "Addresses"
         ],
         "parameters": []
       }
     },
-    "/case-studies/{id}": {
+    "/addresses/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one case-studies record",
+        "description": "Find one addresses record",
         "responses": {
           "200": {
-            "description": "Retrieve case-studies document(s)",
+            "description": "Retrieve addresses document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Addresses"
                 }
               }
             }
@@ -368,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Case-studies"
+          "Addresses"
         ],
         "parameters": [
           {
@@ -385,18 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single case-studies record",
+        "description": "Update a single addresses record",
         "responses": {
           "200": {
-            "description": "Retrieve case-studies document(s)",
+            "description": "Retrieve addresses document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Addresses"
                 }
               }
             }
@@ -434,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Case-studies"
+          "Addresses"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCase-studies"
+                "$ref": "#/components/schemas/NewAddresses"
               }
             }
           }
@@ -462,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single case-studies record",
+        "description": "Delete a single addresses record",
         "responses": {
           "200": {
-            "description": "deletes a single case-studies based on the ID supplied",
+            "description": "deletes a single addresses based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -508,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Case-studies"
+          "Addresses"
         ],
         "parameters": [
           {
@@ -527,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Case-studies": {
+      "Addresses": {
         "required": [
           "id"
         ],
@@ -535,311 +522,47 @@
           "id": {
             "type": "string"
           },
-          "title": {
+          "line_one": {
             "type": "string"
           },
-          "result": {
+          "line_two": {
             "type": "string"
           },
-          "project": {
-            "required": [
-              "id",
-              "website",
-              "featureImage"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "website": {
-                "type": "string"
-              },
-              "featureImage": {
-                "type": "string"
-              },
-              "tech_stacks": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "client": {
-                "type": "string"
-              },
-              "accentColour": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "services": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "image": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "deliverable": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "accent_colour": {
+          "town": {
             "type": "string"
           },
-          "branding_overview": {
+          "postcode": {
             "type": "string"
           },
-          "designs": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "website_overview": {
+          "state": {
             "type": "string"
           },
-          "logo": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "colour_schemes": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "hex": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
           }
         }
       },
-      "NewCase-studies": {
+      "NewAddresses": {
         "properties": {
-          "title": {
+          "line_one": {
             "type": "string"
           },
-          "result": {
+          "line_two": {
             "type": "string"
           },
-          "project": {
+          "town": {
             "type": "string"
           },
-          "services": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "deliverable": {
+          "postcode": {
             "type": "string"
           },
-          "accent_colour": {
+          "state": {
             "type": "string"
           },
-          "branding_overview": {
-            "type": "string"
-          },
-          "website_overview": {
-            "type": "string"
-          },
-          "colour_schemes": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
           },
           "created_by": {
             "type": "string"
@@ -851,5 +574,9 @@
       }
     }
   },
-  "tags": []
+  "tags": [
+    {
+      "name": "Addresses"
+    }
+  ]
 }

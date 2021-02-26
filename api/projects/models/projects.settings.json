@@ -2,11 +2,13 @@
   "kind": "collectionType",
   "collectionName": "projects",
   "info": {
-    "name": "Projects"
+    "name": "Projects",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": false
   },
   "attributes": {
     "title": {
@@ -19,7 +21,7 @@
       "type": "string",
       "required": true
     },
-    "thumbnail": {
+    "featureImage": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -30,19 +32,14 @@
       "plugin": "upload",
       "required": true
     },
-    "media": {
-      "collection": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false
-    },
     "tech_stacks": {
       "collection": "tech-stacks"
+    },
+    "client": {
+      "model": "clients"
+    },
+    "accentColour": {
+      "type": "string"
     }
   }
 }

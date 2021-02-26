@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "deliverables",
+  "info": {
+    "name": "Deliverables"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}

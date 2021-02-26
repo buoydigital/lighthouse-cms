@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "colour_schemes",
+  "info": {
+    "name": "Colour Schemes"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "hex": {
+      "type": "string"
+    }
+  }
+}
