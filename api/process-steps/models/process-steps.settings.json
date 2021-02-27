@@ -2,11 +2,13 @@
   "kind": "collectionType",
   "collectionName": "process_steps",
   "info": {
-    "name": "Process Steps"
+    "name": "Methods of Working",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": false
   },
   "attributes": {
     "title": {
@@ -29,6 +31,9 @@
     "active": {
       "type": "boolean",
       "default": false
+    },
+    "number": {
+      "type": "integer"
     }
   }
 }

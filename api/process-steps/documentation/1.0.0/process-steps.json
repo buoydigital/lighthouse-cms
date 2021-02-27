@@ -611,6 +611,9 @@
           "active": {
             "type": "boolean",
             "default": false
+          },
+          "number": {
+            "type": "integer"
           }
         }
       },
@@ -625,6 +628,9 @@
           "active": {
             "type": "boolean",
             "default": false
+          },
+          "number": {
+            "type": "integer"
           },
           "created_by": {
             "type": "string"

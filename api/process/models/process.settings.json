@@ -2,21 +2,26 @@
   "kind": "singleType",
   "collectionName": "processes",
   "info": {
-    "name": "Process"
+    "name": "Process",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": false
   },
   "attributes": {
     "Title": {
       "type": "string"
     },
-    "Description": {
-      "type": "richtext"
-    },
     "process_steps": {
       "collection": "process-steps"
+    },
+    "linkText": {
+      "type": "string"
+    },
+    "linkUrl": {
+      "type": "string"
     }
   }
 }
